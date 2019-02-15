@@ -1,19 +1,5 @@
 import React, { Component } from 'react'
-import {
-    Grid,
-    Card,
-    CardActions,
-    CardContent,
-    CardHeader,
-    Typography,
-    withStyles,
-    TextField,
-    Divider,
-    Button,
-    AppBar,
-    Toolbar,
-    Drawer
-} from '@material-ui/core'
+import { Grid, Card, CardContent, Typography, withStyles, TextField, Divider, Button, AppBar, Toolbar, Drawer } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send'
 import './App.css'
 
@@ -81,16 +67,7 @@ class App extends Component {
         const socket = new WebSocket('ws://localhost:8080/chat')
 
         this.state = {
-            messages: [
-                {
-                    author: 'not me',
-                    text: 'hello world'
-                },
-                {
-                    author: 'me',
-                    text: 'hello world'
-                }
-            ],
+            messages: [],
             text: '',
             author: '',
             participants: [],
@@ -198,7 +175,6 @@ class App extends Component {
     }
 
     renderParticpants() {
-        const { classes } = this.props
         return (
             <Grid container>
                 <Grid item xs={12}>
