@@ -29,10 +29,12 @@ val colors = File("colors.txt").readLines()
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
+    /* // Uncomment this if you are doing local development
     install(CORS) {
         header(HttpHeaders.AccessControlAllowOrigin)
         anyHost()
     }
+    */
 
     install(io.ktor.websocket.WebSockets) {
         pingPeriod = Duration.ofSeconds(15)
