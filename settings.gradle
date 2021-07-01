@@ -1,1 +1,2 @@
-rootProject.name = "chat"
+rootProject.name = "ktor-react-chat"
+include ':server'
