@@ -131,7 +131,7 @@ tmp/
 
 # Keep external libs
 !app/libs/*.jar
-
+!server/resources/client/build/*.*
 # script output
 check-dpi.txt*
 
